@@ -1,8 +1,12 @@
 'use strict';
 var springsMap = initMap('springs-map');
-var springs = getSprings();
-buildMultipleMarkers(springs).forEach(function(marker) {
-	marker.addTo(springsMap);
+
+// TODO: use geoJSON
+$.getJSON('./data/json/springs.json', function (data) {
+	console.log(data.springs);
+	buildMultipleMarkers(data.springs).forEach(function(marker) {
+		marker.addTo(springsMap);
+	});
 });
 
 function initMap(container) {
@@ -49,52 +53,4 @@ function buildPopupMessage(marker) {
 		content += '<img class="spring-picture" src="' + marker.picture + '">';
 	}
 	return content;
-}
-
-function getSprings() {
-	return [{
-		// TODO: find the correct name
-		label: "Дървеница",
-		description: null,
-		picture: null,
-		lat: 42.65301,
-		lng: 23.36604,
-		isHot: false
-	}, {
-		label: "Сердика",
-		description: null,
-		picture: "./img/springs/serdika.jpg",
-		lat: 42.69991,
-		lng: 23.32413,
-		isHot: true
-	}, {
-		label: "Конската чешма",
-		description: null,
-		picture: null,
-		lat: 42.88987,
-		lng: 25.32530,
-		isHot: false
-	}, {
-		label: "Вонящата вода",
-		description: "Водата има силен мирис на сяра, който обаче преминава след няколкодневен престой",
-		picture: null,
-		lat: 42.81417,
-		lng: 25.30611,
-		isHot: false
-	}, {
-		label: "Соколски манастир",
-		// TODO: през ... година
-		description: "Чешмата е построена от Уста̀ Колю Фичето",
-		picture: "./img/springs/sokolski_manastir.jpg",
-		lat: 42.79733,
-		lng: 25.33839,
-		isHot: false
-	}, {
-		label: "Любовната чешма",
-		description: null,
-		picture: null,
-		lat: 42.87260,
-		lng: 25.31458,
-		isHot: false
-	}];
 }
