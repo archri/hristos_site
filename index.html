@@ -25,7 +25,7 @@ links:
         Нишки
         {% for page_looped in site.html_pages %}
           {% if page != page_looped %}
-          <li><a href="{{ page_looped.url }}">{{ page_looped.title }}</a></li>
+          <li><a href=".{{ page_looped.url }}">{{ page_looped.title }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
