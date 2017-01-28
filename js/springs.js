@@ -49,7 +49,7 @@ function buildPopupMessage(marker) {
     content += '<p>' + marker.description + '</p>';
   }
   if (marker.picture) {
-    content += '<img class="spring-picture" src="/assets/img/springs/' + marker.picture + '">';
+    content += '<img class="spring-picture" src="./assets/img/springs/' + marker.picture + '">';
   }
   return content;
 }
