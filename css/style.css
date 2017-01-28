@@ -1,0 +1,23 @@
+img {
+  width: 50px;
+}
+
+#content-table, #welcome {
+  margin-top: 20px;
+}
+
+video {
+  width: 100%;
+}
+
+#springs-map {
+  height: 500px;
+}
+
+img.spring-picture {
+  width: 150px;
+}
+
+#welcome > div {
+  min-width: 60px;
+}

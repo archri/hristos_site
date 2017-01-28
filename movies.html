@@ -1,0 +1,20 @@
+---
+layout: default
+title: Филми
+---
+{% for movie in site.data.movies %}
+<div class="col-md-3 col-sm-4 col-xs-12">
+  <div class="thumbnail">
+    <div>
+      <video controls>
+        <source src="/assets/video/movies/{{ movie.name_original | downcase | replace: ' ', '_' }}_{{ movie.year }}.ogg" type="video/ogg" width="320" height="240">
+        Your browser does not support the video tag.
+      </video>
+      <div class="caption">
+        <h4>{{ movie.name_bg }}</h4>
+        <p>{{ movie.name_original }} ({{ movie.year }})</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
