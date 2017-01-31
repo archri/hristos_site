@@ -1,15 +1,11 @@
 ---
-layout: default
-title: Кръстопът
-links:
-  - springs.html
-  - movies.html
-  - computer_metaphors.html
+layout: page
+title: Отправен възел
 ---
 <div class="col-xs-12">
   <div class="row" id="welcome">
     <div class="col-xs-2">
-      <img src={{ "/assets/img/spider_clipart.png" | absolute_url }} alt="spider" />
+      <img src={{ "/assets/img/spider_clipart.png" | absolute_url }} id="spider-picture" alt="spider" />
     </div>
     <div class="col-xs-10">
       <p>
@@ -25,10 +21,24 @@ links:
         Нишки
         {% for page_looped in site.html_pages %}
           {% if page != page_looped %}
-          <li><a href=".{{ page_looped.url }}">{{ page_looped.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ page_looped.url }}">
+            {{ page_looped.title }}
+          </a></li>
           {% endif %}
         {% endfor %}
       </ul>
     </div>
   </div>
+  <hr>
+  <footer>
+    <ul>
+      Можеш да ми пишеш на:
+      <li>е-поща:
+        <a href="mailto:archri@openmailbox.org">archri@openmailbox.org</a>
+      </li>
+      <li>XMPP: <a href="xmpp:archri@jabb.im">archri@jabb.im</a></li>
+      <li>Diaspora: archri@diasp.org
+      </li>
+    </ul>
+  </footer>
 </div>

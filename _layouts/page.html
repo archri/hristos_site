@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href={{ "/lib/bootstrap-3.3.7-dist/css/bootstrap.css" | absolute_url }}>
-    <link rel="stylesheet" href={{ "/css/style.css" | absolute_url }}>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-xxs.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
     {% for stylesheet in page.stylesheets %}
-      <link rel="stylesheet" href={{ stylesheet | absolute_url }}>
+      <link rel="stylesheet" href="{{ site.baseurl }}/{{ stylesheet }}">
     {% endfor %}
   </head>
   <body>
@@ -20,7 +21,8 @@
       </div>
     </div>
     {% for script in page.scripts %}
-      <script type="text/javascript" src={{ script | absolute_url }}></script>
+      <script type="text/javascript" src="{{ site.baseurl }}/{{ script }}">
+      </script>
     {% endfor %}
   </body>
 </html>

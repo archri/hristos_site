@@ -1,4 +1,4 @@
-img {
+img#spider {
   width: 50px;
 }
 
@@ -14,10 +14,18 @@ video {
   height: 500px;
 }
 
+img {
+  width: 100%;
+}
+
 img.spring-picture {
   width: 150px;
 }
 
 #welcome > div {
   min-width: 60px;
+}
+
+.blog-content {
+  text-align: justify;
 }

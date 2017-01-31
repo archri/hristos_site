@@ -15,11 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: Възелът на Христо
 email: archri@openmailbox.org
+xmpp: archri@jabb.im
+diaspora: archri@disp.org
 description: > # this means to ignore newlines until "baseurl:"
   Това е моят възел в мрежата. Тук споделям някои от нещата, които ме вълнуват.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
 github_username:  archri
 
 # Build settings
@@ -30,3 +29,10 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# custom settings
+collections:
+  wild_plants:
+    output: true
+  computer_metaphors:
+    output: true
