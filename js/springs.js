@@ -36,7 +36,9 @@ function buildMultipleMarkers(springs) {
 function buildOneMarker(spring) {
   var iconObj = spring.isHot === "true" ? yellowIcon : blueIcon;
   var marker = L.marker([spring.lat, spring.lng], {icon: iconObj});
-  var popup = marker.bindPopup(buildPopupMessage(spring));
+  if (spring.label || spring.description || spring.picture) {
+    marker.bindPopup(buildPopupMessage(spring));
+  }
   return marker;
 }
 
