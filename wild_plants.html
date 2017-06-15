@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: common_page
 title: Диворастящи ядливи растения
 ---
 {% for plant in site.wild_plants %}
@@ -7,10 +7,10 @@ title: Диворастящи ядливи растения
     <div class="thumbnail">
       <a href="{{ site.baseurl }}{{ plant.url }}">
         <div class="image-wrapper">
-          <img src="{{ site.baseurl }}/assets/img/wild_plants/{{ plant.image }}">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/{{ plant.image.namespace }}/{{ plant.image.filename }}/256px-{{ plant.image.filename }}">
         </div>
         <div class="caption">
-          <h3>{{ plant.title }}</h3>
+          <h3>{{ plant.name.bg }}</h3>
         </div>
       </a>
     </div>
