@@ -50,9 +50,17 @@ defaults:
       path: "js"
     values:
       layout: nill
+
   -
     scope:
       path: ""
       type: "wild_plants" # a collection in your site, in plural form
     values:
       layout: "wild_plant"
+
+  -
+    scope:
+      path: ""
+      type: "computer_metaphors" # a collection in your site, in plural form
+    values:
+      layout: "narrow"
