@@ -14,16 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Възелът на Христо
-email: archri@openmailbox.org
-xmpp: archri@jabb.im
-diaspora: archri@disp.org
-description: > # this means to ignore newlines until "baseurl:"
-  Това е моят възел в мрежата. Тук споделям някои от нещата, които ме вълнуват.
-github_username:  archri
 
 # Build settings
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:
