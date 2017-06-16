@@ -1,5 +1,5 @@
 ---
-layout: wild_plant
+title: Синя жлъчка / Цикория
 hyperlink: https://bg.wikipedia.org/wiki/Синя_жлъчка
 name:
   bg: Синя жлъчка / Цикория

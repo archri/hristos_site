@@ -1,5 +1,4 @@
 ---
-layout: common_page
 title: Връзка с мен
 ---
 е-поща: [archri@openmailbox.org](mailto:archri@openmailbox.org)  

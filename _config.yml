@@ -36,3 +36,23 @@ collections:
     output: true
   computer_metaphors:
     output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+  -
+    scope:
+      path: "js"
+    values:
+      layout: nill
+  -
+    scope:
+      path: ""
+      type: "wild_plants" # a collection in your site, in plural form
+    values:
+      layout: "wild_plant"
