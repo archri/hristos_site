@@ -1,25 +1,27 @@
 ---
 layout: common_page
 ---
-<div class="col-lg-6 col-md-7 col-sm-9 col-xxs-12 blog-content">
-  <p>
-    {% assign m = page.date | date: "%-m" %}
-    {{ page.date | date: "%-d" }}
-    {% case m %}
-      {% when '1' %}януари
-      {% when '2' %}февруари
-      {% when '3' %}март
-      {% when '4' %}април
-      {% when '5' %}май
-      {% when '6' %}юни
-      {% when '7' %}юли
-      {% when '8' %}август
-      {% when '9' %}септември
-      {% when '10' %}октомври
-      {% when '11' %}ноември
-      {% when '12' %}декември
-    {% endcase %}
-    {{ page.date | date: "%Y" }}
-  </p>
-  {{ content }}
+<div class="row">
+  <div class="col-lg-6 col-md-7 col-sm-9 col-xxs-12 blog-content">
+    <p>
+      {% assign m = page.date | date: "%-m" %}
+      {{ page.date | date: "%-d" }}
+      {% case m %}
+        {% when '1' %}януари
+        {% when '2' %}февруари
+        {% when '3' %}март
+        {% when '4' %}април
+        {% when '5' %}май
+        {% when '6' %}юни
+        {% when '7' %}юли
+        {% when '8' %}август
+        {% when '9' %}септември
+        {% when '10' %}октомври
+        {% when '11' %}ноември
+        {% when '12' %}декември
+      {% endcase %}
+      {{ page.date | date: "%Y" }}
+    </p>
+    {{ content }}
+  </div>
 </div>

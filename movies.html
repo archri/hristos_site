@@ -4,12 +4,10 @@ title: Любими филми
 ---
 {% assign movies_sorted_by_year_and_name = site.data.movies | sort:"name" | sort:"year" | reverse %}
 {% assign sorted_movies = movies_sorted_by_year_and_name | sort:"rating" | reverse %}
-<div class="col-lg-6 col-md-7 col-sm-9 col-xxs-12 blog-content">
-  {% for movie in sorted_movies %}
-  <p>
-    <a href="http://www.imdb.com/title/tt{{ movie.imdb_id }}">
-      {{ movie.name }} ({{ movie.year }})
-    </a>
-  </p>
-  {% endfor %}
-</div>
+{% for movie in sorted_movies %}
+<p>
+  <a href="http://www.imdb.com/title/tt{{ movie.imdb_id }}">
+    {{ movie.name }} ({{ movie.year }})
+  </a>
+</p>
+{% endfor %}

@@ -29,3 +29,7 @@ img.spring-picture {
 .blog-content {
   text-align: justify;
 }
+
+.navbar-brand > img {
+  height: 25px;
+}

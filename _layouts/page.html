@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap-xxs.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
     {% for stylesheet in page.stylesheets %}
@@ -12,9 +12,106 @@
     {% endfor %}
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ site.baseurl }}/index.html">
+            <span class="glyphicon glyphicon-home"></span>
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-leaf"></span> Природа
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ site.baseurl }}/wild_plants.html">
+                    <span class="glyphicon glyphicon-grain"></span>
+                    Диви растения
+                  </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="{{ site.baseurl }}/springs.html">
+                    <span class="glyphicon glyphicon-tint"></span>
+                    Извори
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-book"></span> Речници
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="{{ site.baseurl }}/">
+                    <span class="glyphicon glyphicon-grain"></span>
+                    Чистота
+                  </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="{{ site.baseurl }}/">
+                    <span class="glyphicon glyphicon-tint"></span>
+                    Тайни
+                  </a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <a href="{{ site.baseurl }}/">
+                    <span class="glyphicon glyphicon-tint"></span>
+                    Симетрия
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/movies.html">
+                <span class="glyphicon glyphicon-film"></span>
+                Любими филми
+              </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="{{ site.baseurl }}/contacts.html">
+                <span class="glyphicon glyphicon-envelope"></span>
+                Пиши ми
+              </a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
     <div class="container">
       {{ content }}
+      <hr>
+      <footer>
+        <p>В моят възел от мрежата ще намериш само свободно съдържание.</p>
+        <p>
+          Ползвай го безстрашно, но тръгни преди това по нишката, оказана с табела <span class="glyphicon glyphicon-link"></span>, за да научиш заръките на създателя му.</p>
+        </p>
+      </footer>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js">
+    </script>
     {% for script in page.scripts %}
       <script type="text/javascript" src="{{ site.baseurl }}/{{ script }}">
       </script>

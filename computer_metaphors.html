@@ -4,6 +4,8 @@ title: Компютърни метафори
 ---
 <ul>
   {% for metaphor in site.computer_metaphors %}
-    <li><a href="{{ site.baseurl }}{{ metaphor.url }}">{{ metaphor.title }}</a></li>
+    <li>
+      <a href="{{ site.baseurl }}{{ metaphor.url }}">{{ metaphor.title }}</a>
+    </li>
   {% endfor %}
 </ul>

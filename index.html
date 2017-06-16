@@ -1,43 +1,30 @@
 ---
-layout: page
+layout: common_page
 title: Отправен възел
 ---
-<div class="col-xs-12">
-  <div class="row" id="welcome">
-    <div class="col-xs-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Spiders_web.svg" id="spider-picture" alt="spider" />
-    </div>
-    <div class="col-xs-10">
-      <p>
-        Добре си дошъл приятелю паяк.<br>
-        Радвам се, че си мой гост.<br>
-        Избери си нишка по която да поемеш.
-      </p>
-    </div>
+<div class="row" id="welcome">
+  <div class="col-xs-2">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Spiders_web.svg" id="spider-picture" alt="spider" />
   </div>
-  <div class="row" id="content-table">
-    <div class="col-xs-12">
-      <ul>
-        Нишки
-        {% for page_looped in site.html_pages %}
-          {% if page != page_looped %}
-          <li><a href="{{ site.baseurl }}{{ page_looped.url }}">
-            {{ page_looped.title }}
-          </a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
+  <div class="col-xs-10">
+    <p>
+      Добре си дошъл приятелю паяк.<br>
+      Радвам се, че си мой гост.<br>
+      Избери си нишка по която да поемеш.
+    </p>
   </div>
-  <hr>
-  <footer>
+</div>
+<div class="row" id="content-table">
+  <div class="col-xs-12">
     <ul>
-      Можеш да ми пишеш на:
-      <li>е-поща:
-        <a href="mailto:archri@openmailbox.org">archri@openmailbox.org</a>
-      </li>
-      <li>XMPP: <a href="xmpp:archri@jabb.im">archri@jabb.im</a></li>
-      <li>Diaspora: archri@diasp.org</li>
+      Нишки
+      {% for page_looped in site.html_pages %}
+        {% if page != page_looped %}
+        <li><a href="{{ site.baseurl }}{{ page_looped.url }}">
+          {{ page_looped.title }}
+        </a></li>
+        {% endif %}
+      {% endfor %}
     </ul>
-  </footer>
+  </div>
 </div>
