@@ -1,0 +1,16 @@
+---
+title: Чистота на българския език
+---
+{% for pair in site.data.dictionaries.bulgarian.purity %}
+  {% assign isFirst = true %}
+  {% assign foreignWord = pair[0] %}
+  {% assign nativeWords = pair[1] %}
+  <p>
+    <strong>{{ foreignWord }}</strong>:
+    {% for nativeWord in nativeWords %}
+      {% if isFirst == false %}, {% endif %}
+      {{ nativeWord }}
+      {% assign isFirst = false %}
+    {% endfor %}
+  </p>
+{% endfor %}
