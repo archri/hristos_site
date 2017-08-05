@@ -13,17 +13,3 @@ title: Отправен възел
     </p>
   </div>
 </div>
-<div class="row" id="content-table">
-  <div class="col-xs-12">
-    <ul>
-      Нишки
-      {% for page_looped in site.html_pages %}
-        {% if page != page_looped %}
-        <li><a href="{{ site.baseurl }}{{ page_looped.url }}">
-          {{ page_looped.title }}
-        </a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-</div>
